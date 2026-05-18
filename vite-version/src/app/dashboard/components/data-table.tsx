@@ -181,16 +181,22 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
   {
     accessorKey: "status",
     header: "Status",
-    cell: ({ row }) => (
-      <Badge variant="outline" className="text-muted-foreground px-1.5">
-        {row.original.status === "Done" ? (
-          <CircleCheckBig className="text-green-500 dark:text-green-400" />
-        ) : (
-          <Loader />
-        )}
-        {row.original.status}
-      </Badge>
-    ),
+    cell: ({ row }) => {
+      const isDone = row.original.status === "Done"
+      return (
+        <Badge
+          variant="outline"
+          className={`px-1.5 ${
+            isDone
+              ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
+              : "border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-400"
+          }`}
+        >
+          {isDone ? <CircleCheckBig /> : <Loader />}
+          {row.original.status}
+        </Badge>
+      )
+    },
   },
   {
     accessorKey: "target",

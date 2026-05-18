@@ -15,6 +15,7 @@ import {
 import { cn } from "@/lib/utils"
 
 // The four metrics, previously rendered as four separate cards.
+// `tint` is the gradient start color that softly tints the card per metric.
 const cards = [
   {
     description: "Total Revenue",
@@ -23,6 +24,7 @@ const cards = [
     badge: "+12.5%",
     footerText: "Trending up this month",
     footerNote: "Visitors for the last 6 months",
+    tint: "from-emerald-500/10",
   },
   {
     description: "New Customers",
@@ -31,6 +33,7 @@ const cards = [
     badge: "-20%",
     footerText: "Down 20% this period",
     footerNote: "Acquisition needs attention",
+    tint: "from-rose-500/10",
   },
   {
     description: "Active Accounts",
@@ -39,6 +42,7 @@ const cards = [
     badge: "+12.5%",
     footerText: "Strong user retention",
     footerNote: "Engagement exceed targets",
+    tint: "from-sky-500/10",
   },
   {
     description: "Growth Rate",
@@ -47,6 +51,7 @@ const cards = [
     badge: "+4.5%",
     footerText: "Steady performance increase",
     footerNote: "Meets growth projections",
+    tint: "from-violet-500/10",
   },
 ] as const
 
@@ -74,11 +79,22 @@ export function SectionCards() {
   }
 
   const card = cards[index]
-  const TrendIcon = card.trend === "up" ? TrendingUp : TrendingDown
+  const isUp = card.trend === "up"
+  const TrendIcon = isUp ? TrendingUp : TrendingDown
+  // Semantic trend colors: green for growth, red for decline.
+  const trendBadgeClass = isUp
+    ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
+    : "border-rose-500/30 bg-rose-500/10 text-rose-600 dark:text-rose-400"
+  const trendTextClass = isUp
+    ? "text-emerald-600 dark:text-emerald-400"
+    : "text-rose-600 dark:text-rose-400"
 
   return (
     <Card
-      className="@container/card from-primary/5 to-card dark:bg-card bg-gradient-to-t shadow-xs"
+      className={cn(
+        "@container/card to-card bg-gradient-to-t shadow-xs",
+        card.tint,
+      )}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -100,7 +116,7 @@ export function SectionCards() {
                 {card.value}
               </CardTitle>
               <CardAction>
-                <Badge variant="outline">
+                <Badge variant="outline" className={trendBadgeClass}>
                   <TrendIcon />
                   {card.badge}
                 </Badge>
@@ -108,7 +124,8 @@ export function SectionCards() {
             </CardHeader>
             <CardFooter className="flex-col items-start gap-1.5 text-sm">
               <div className="line-clamp-1 flex gap-2 font-medium">
-                {card.footerText} <TrendIcon className="size-4" />
+                {card.footerText}{" "}
+                <TrendIcon className={cn("size-4", trendTextClass)} />
               </div>
               <div className="text-muted-foreground">{card.footerNote}</div>
             </CardFooter>

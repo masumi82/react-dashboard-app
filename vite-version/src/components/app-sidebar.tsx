@@ -46,11 +46,13 @@ const data = {
           title: "Dashboard 1",
           url: "/dashboard",
           icon: LayoutDashboard,
+          iconColor: "text-sky-500",
         },
         {
           title: "Dashboard 2",
           url: "/dashboard-2",
           icon: LayoutPanelLeft,
+          iconColor: "text-indigo-500",
         },
       ],
     },
@@ -61,26 +63,31 @@ const data = {
           title: "Mail",
           url: "/mail",
           icon: Mail,
+          iconColor: "text-rose-500",
         },
         {
           title: "Tasks",
           url: "/tasks",
           icon: CheckSquare,
+          iconColor: "text-emerald-500",
         },
         {
           title: "Chat",
           url: "/chat",
           icon: MessageCircle,
+          iconColor: "text-violet-500",
         },
         {
           title: "Calendar",
           url: "/calendar",
           icon: Calendar,
+          iconColor: "text-orange-500",
         },
         {
           title: "Users",
           url: "/users",
           icon: Users,
+          iconColor: "text-cyan-500",
         },
       ],
     },
@@ -92,11 +99,13 @@ const data = {
           url: "/landing",
           target: "_blank",
           icon: LayoutTemplate,
+          iconColor: "text-teal-500",
         },
         {
           title: "Auth Pages",
           url: "#",
           icon: Shield,
+          iconColor: "text-amber-500",
           items: [
             {
               title: "Sign In 1",
@@ -140,6 +149,7 @@ const data = {
           title: "Errors",
           url: "#",
           icon: AlertTriangle,
+          iconColor: "text-red-500",
           items: [
             {
               title: "Unauthorized",
@@ -167,6 +177,7 @@ const data = {
           title: "Settings",
           url: "#",
           icon: Settings,
+          iconColor: "text-blue-500",
           items: [
             {
               title: "User Settings",
@@ -198,11 +209,13 @@ const data = {
           title: "FAQs",
           url: "/faqs",
           icon: HelpCircle,
+          iconColor: "text-fuchsia-500",
         },
         {
           title: "Pricing",
           url: "/pricing",
           icon: CreditCard,
+          iconColor: "text-lime-600",
         },
       ],
     },
