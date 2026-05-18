@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
+import { Trans, useTranslation } from "react-i18next"
 import { Separator } from '@/components/ui/separator'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -16,38 +17,34 @@ import {
 import { Logo } from '@/components/logo'
 import { Github, Twitter, Linkedin, Youtube, Heart } from 'lucide-react'
 
-const newsletterSchema = z.object({
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-})
-
+// `labelKey` holds a full i18n key (landing namespace). `as const` keeps each
+// key as a literal type for the type-safe t().
 const footerLinks = {
   product: [
-    { name: 'Features', href: '#features' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'API', href: '#api' },
-    { name: 'Documentation', href: '#docs' },
+    { labelKey: 'footer.links.features', href: '#features' },
+    { labelKey: 'footer.links.pricing', href: '#pricing' },
+    { labelKey: 'footer.links.api', href: '#api' },
+    { labelKey: 'footer.links.documentation', href: '#docs' },
   ],
   company: [
-    { name: 'About', href: '#about' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Careers', href: '#careers' },
-    { name: 'Press', href: '#press' },
+    { labelKey: 'footer.links.about', href: '#about' },
+    { labelKey: 'footer.links.blog', href: '#blog' },
+    { labelKey: 'footer.links.careers', href: '#careers' },
+    { labelKey: 'footer.links.press', href: '#press' },
   ],
   resources: [
-    { name: 'Help Center', href: '#help' },
-    { name: 'Community', href: '#community' },
-    { name: 'Guides', href: '#guides' },
-    { name: 'Webinars', href: '#webinars' },
+    { labelKey: 'footer.links.helpCenter', href: '#help' },
+    { labelKey: 'footer.links.community', href: '#community' },
+    { labelKey: 'footer.links.guides', href: '#guides' },
+    { labelKey: 'footer.links.webinars', href: '#webinars' },
   ],
   legal: [
-    { name: 'Privacy', href: '#privacy' },
-    { name: 'Terms', href: '#terms' },
-    { name: 'Security', href: '#security' },
-    { name: 'Status', href: '#status' },
+    { labelKey: 'footer.links.privacy', href: '#privacy' },
+    { labelKey: 'footer.links.terms', href: '#terms' },
+    { labelKey: 'footer.links.security', href: '#security' },
+    { labelKey: 'footer.links.status', href: '#status' },
   ],
-}
+} as const
 
 const socialLinks = [
   { name: 'Twitter', href: '#', icon: Twitter },
@@ -57,6 +54,15 @@ const socialLinks = [
 ]
 
 export function LandingFooter() {
+  const { t } = useTranslation('landing')
+
+  // Schema is built inside the component so the validation message is localized.
+  const newsletterSchema = z.object({
+    email: z.string().email({
+      message: t('footer.newsletter.invalidEmail'),
+    }),
+  })
+
   const form = useForm<z.infer<typeof newsletterSchema>>({
     resolver: zodResolver(newsletterSchema),
     defaultValues: {
@@ -77,9 +83,9 @@ export function LandingFooter() {
         {/* Newsletter Section */}
         <div className="mb-16">
           <div className="mx-auto max-w-2xl text-center">
-            <h3 className="text-2xl font-bold mb-4">Stay updated</h3>
+            <h3 className="text-2xl font-bold mb-4">{t('footer.newsletter.title')}</h3>
             <p className="text-muted-foreground mb-6">
-              Get the latest updates, articles, and resources sent to your inbox weekly.
+              {t('footer.newsletter.description')}
             </p>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-2 max-w-md mx-auto sm:flex-row">
@@ -91,7 +97,7 @@ export function LandingFooter() {
                       <FormControl>
                         <Input
                           type="email"
-                          placeholder="Enter your email"
+                          placeholder={t('footer.newsletter.placeholder')}
                           {...field}
                         />
                       </FormControl>
@@ -99,7 +105,7 @@ export function LandingFooter() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="cursor-pointer">Subscribe</Button>
+                <Button type="submit" className="cursor-pointer">{t('footer.newsletter.subscribe')}</Button>
               </form>
             </Form>
           </div>
@@ -116,7 +122,7 @@ export function LandingFooter() {
               </a>
             </div>
             <p className="text-muted-foreground mb-6 max-lg:text-center max-lg:flex max-lg:justify-center">
-              Accelerating web development with curated blocks, templates, landing pages, and admin dashboards designed for modern developers.
+              {t('footer.brandDescription')}
             </p>
             <div className="flex space-x-4 max-lg:justify-center">
               {socialLinks.map((social) => (
@@ -136,15 +142,15 @@ export function LandingFooter() {
 
           {/* Links Columns */}
           <div className='max-md:col-span-2 lg:col-span-1'>
-            <h4 className="font-semibold mb-4">Product</h4>
+            <h4 className="font-semibold mb-4">{t('footer.columns.product')}</h4>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
-                <li key={link.name}>
+                <li key={link.labelKey}>
                   <a
                     href={link.href}
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    {link.name}
+                    {t(link.labelKey)}
                   </a>
                 </li>
               ))}
@@ -152,15 +158,15 @@ export function LandingFooter() {
           </div>
 
           <div className='max-md:col-span-2 lg:col-span-1'>
-            <h4 className="font-semibold mb-4">Company</h4>
+            <h4 className="font-semibold mb-4">{t('footer.columns.company')}</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
-                <li key={link.name}>
+                <li key={link.labelKey}>
                   <a
                     href={link.href}
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    {link.name}
+                    {t(link.labelKey)}
                   </a>
                 </li>
               ))}
@@ -168,15 +174,15 @@ export function LandingFooter() {
           </div>
 
           <div className='max-md:col-span-2 lg:col-span-1'>
-            <h4 className="font-semibold mb-4">Resources</h4>
+            <h4 className="font-semibold mb-4">{t('footer.columns.resources')}</h4>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
-                <li key={link.name}>
+                <li key={link.labelKey}>
                   <a
                     href={link.href}
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    {link.name}
+                    {t(link.labelKey)}
                   </a>
                 </li>
               ))}
@@ -184,15 +190,15 @@ export function LandingFooter() {
           </div>
 
           <div className='max-md:col-span-2 lg:col-span-1'>
-            <h4 className="font-semibold mb-4">Legal</h4>
+            <h4 className="font-semibold mb-4">{t('footer.columns.legal')}</h4>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
-                <li key={link.name}>
+                <li key={link.labelKey}>
                   <a
                     href={link.href}
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    {link.name}
+                    {t(link.labelKey)}
                   </a>
                 </li>
               ))}
@@ -206,25 +212,34 @@ export function LandingFooter() {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-2">
           <div className="flex flex-col sm:flex-row items-center gap-2 text-muted-foreground text-sm">
             <div className="flex items-center gap-1">
-              <span>Made with</span>
-              <Heart className="h-4 w-4 text-red-500 fill-current" />
-              <span>by</span>
-              <a href="https://shadcnstore.com" target='_blank' className="font-semibold text-foreground hover:text-primary transition-colors cursor-pointer">
-                ShadcnStore
-              </a>
+              <Trans
+                i18nKey="footer.madeWith"
+                ns="landing"
+                components={{
+                  1: <Heart className="h-4 w-4 text-red-500 fill-current" />,
+                  2: (
+                    <a
+                      href="https://shadcnstore.com"
+                      target='_blank'
+                      rel="noopener noreferrer"
+                      className="font-semibold text-foreground hover:text-primary transition-colors cursor-pointer"
+                    />
+                  ),
+                }}
+              />
             </div>
             <span className="hidden sm:inline">•</span>
-            <span>© {new Date().getFullYear()} for the developer community</span>
+            <span>{t('footer.copyright', { year: new Date().getFullYear() })}</span>
           </div>
           <div className="flex items-center space-x-4 text-sm text-muted-foreground mt-4 md:mt-0">
             <a href="#privacy" className="hover:text-foreground transition-colors">
-              Privacy Policy
+              {t('footer.bottomLinks.privacyPolicy')}
             </a>
             <a href="#terms" className="hover:text-foreground transition-colors">
-              Terms of Service
+              {t('footer.bottomLinks.termsOfService')}
             </a>
             <a href="#cookies" className="hover:text-foreground transition-colors">
-              Cookie Policy
+              {t('footer.bottomLinks.cookiePolicy')}
             </a>
           </div>
         </div>

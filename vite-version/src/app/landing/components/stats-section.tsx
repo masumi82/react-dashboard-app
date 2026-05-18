@@ -8,36 +8,40 @@ import {
 } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { DotPattern } from '@/components/dot-pattern'
+import { useTranslation } from 'react-i18next'
 
-
+// `labelKey`/`descriptionKey` hold full i18n keys (landing namespace).
+// `as const` keeps each key as a literal type for the type-safe t().
 const stats = [
   {
     icon: Package,
     value: '500+',
-    label: 'Components',
-    description: 'Ready-to-use blocks'
+    labelKey: 'stats.components.label',
+    descriptionKey: 'stats.components.description'
   },
   {
     icon: Download,
     value: '25K+',
-    label: 'Downloads',
-    description: 'Trusted worldwide'
+    labelKey: 'stats.downloads.label',
+    descriptionKey: 'stats.downloads.description'
   },
   {
     icon: Users,
     value: '10K+',
-    label: 'Developers',
-    description: 'Active community'
+    labelKey: 'stats.developers.label',
+    descriptionKey: 'stats.developers.description'
   },
   {
     icon: Star,
     value: '4.9',
-    label: 'Rating',
-    description: 'User satisfaction'
+    labelKey: 'stats.rating.label',
+    descriptionKey: 'stats.rating.description'
   }
-]
+] as const
 
 export function StatsSection() {
+  const { t } = useTranslation('landing')
+
   return (
     <section className="py-12 sm:py-16 relative">
       {/* Background with transparency */}
@@ -62,8 +66,8 @@ export function StatsSection() {
                   <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
                     {stat.value}
                   </h3>
-                  <p className="font-semibold text-foreground">{stat.label}</p>
-                  <p className="text-sm text-muted-foreground">{stat.description}</p>
+                  <p className="font-semibold text-foreground">{t(stat.labelKey)}</p>
+                  <p className="text-sm text-muted-foreground">{t(stat.descriptionKey)}</p>
                 </div>
               </CardContent>
             </Card>

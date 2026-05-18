@@ -5,45 +5,49 @@ import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { CardDecorator } from '@/components/ui/card-decorator'
 import { Github, Code, Palette, Layout, Crown } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
+// `titleKey`/`descriptionKey` hold full i18n keys (landing namespace).
+// `as const` keeps each key as a literal type for the type-safe t().
 const values = [
   {
     icon: Code,
-    title: 'Developer First',
-    description: 'Every component is built with the developer experience in mind, ensuring clean code and easy integration.'
+    titleKey: 'about.values.developerFirst.title',
+    descriptionKey: 'about.values.developerFirst.description'
   },
   {
     icon: Palette,
-    title: 'Design Excellence',
-    description: 'We maintain the highest design standards, following shadcn/ui principles and modern UI patterns.'
+    titleKey: 'about.values.designExcellence.title',
+    descriptionKey: 'about.values.designExcellence.description'
   },
   {
     icon: Layout,
-    title: 'Production Ready',
-    description: 'Battle-tested components used in real applications with proven performance and reliability across different environments.'
+    titleKey: 'about.values.productionReady.title',
+    descriptionKey: 'about.values.productionReady.description'
   },
   {
     icon: Crown,
-    title: 'Premium Quality',
-    description: 'Hand-crafted with attention to detail and performance optimization, ensuring exceptional user experience and accessibility.'
+    titleKey: 'about.values.premiumQuality.title',
+    descriptionKey: 'about.values.premiumQuality.description'
   }
-]
+] as const
 
 export function AboutSection() {
+  const { t } = useTranslation('landing')
+
   return (
     <section id="about" className="py-24 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-4xl text-center mb-16">
           <Badge variant="outline" className="mb-4">
-            About ShadcnStore
+            {t('about.badge')}
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-            Built for developers, by developers
+            {t('about.heading')}
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            We're passionate about creating the best marketplace for shadcn/ui components and templates.
-            Our mission is to accelerate development and help developers build beautiful admin interfaces faster.
+            {t('about.subheading')}
           </p>
         </div>
 
@@ -56,8 +60,8 @@ export function AboutSection() {
                   <CardDecorator>
                     <value.icon className='h-6 w-6' aria-hidden />
                   </CardDecorator>
-                  <h3 className='mt-6 font-medium text-balance'>{value.title}</h3>
-                  <p className='text-muted-foreground mt-3 text-sm'>{value.description}</p>
+                  <h3 className='mt-6 font-medium text-balance'>{t(value.titleKey)}</h3>
+                  <p className='text-muted-foreground mt-3 text-sm'>{t(value.descriptionKey)}</p>
                 </div>
               </CardContent>
             </Card>
@@ -67,18 +71,18 @@ export function AboutSection() {
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="flex items-center justify-center gap-2 mb-6">
-            <span className="text-muted-foreground">❤️ Made with love for the developer community</span>
+            <span className="text-muted-foreground">{t('about.madeWithLove')}</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="cursor-pointer" asChild>
               <a href="https://github.com/silicondeck/shadcn-dashboard-landing-template" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-4 w-4" />
-                Star on GitHub
+                {t('about.starOnGithub')}
               </a>
             </Button>
             <Button size="lg" variant="outline" className="cursor-pointer" asChild>
               <a href="https://discord.com/invite/XEQhPc9a6p" target="_blank" rel="noopener noreferrer">
-                Join Discord Community
+                {t('about.joinDiscord')}
               </a>
             </Button>
           </div>

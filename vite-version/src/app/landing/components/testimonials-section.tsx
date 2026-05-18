@@ -3,108 +3,99 @@
 import { Card, CardContent } from '@/components/ui/card'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
+import { useTranslation } from 'react-i18next'
 
-type Testimonial = {
-  name: string
-  role: string
-  image: string
-  quote: string
-}
-
-const testimonials: Testimonial[] = [
+// `roleKey`/`quoteKey` hold full i18n keys (landing namespace).
+// `as const` keeps each key as a literal type for the type-safe t().
+const testimonials = [
   {
     name: 'Alexandra Mitchell',
-    role: 'Senior Frontend Developer',
+    roleKey: 'testimonials.items.alexandraMitchell.role',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=female-1',
-    quote:
-      'This platform has completely transformed our development workflow. The component system is so well-architected that even complex applications feel simple to build.',
+    quoteKey: 'testimonials.items.alexandraMitchell.quote',
   },
   {
     name: 'James Thompson',
-    role: 'Technical Lead',
+    roleKey: 'testimonials.items.jamesThompson.role',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=male-1',
-    quote: 'After trying countless frameworks, this is the one that finally clicked. The documentation is exceptional.',
+    quoteKey: 'testimonials.items.jamesThompson.quote',
   },
   {
     name: 'Priya Sharma',
-    role: 'Product Designer',
+    roleKey: 'testimonials.items.priyaSharma.role',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=female-2',
-    quote:
-      'The design system is beautiful and consistent. I can prototype ideas quickly and hand them off to developers with confidence that the implementation will match perfectly.',
+    quoteKey: 'testimonials.items.priyaSharma.quote',
   },
   {
     name: 'Robert Kim',
-    role: 'Engineering Manager',
+    roleKey: 'testimonials.items.robertKim.role',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=male-2',
-    quote:
-      'We migrated our entire application to this platform in just two weeks. The performance improvements were immediate.',
+    quoteKey: 'testimonials.items.robertKim.quote',
   },
   {
     name: 'Maria Santos',
-    role: 'Full Stack Engineer',
+    roleKey: 'testimonials.items.mariaSantos.role',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=female-3',
-    quote:
-      'The accessibility features are top-notch. Building inclusive applications has never been easier. Every component follows best practices out of the box, and the automated testing suite ensures we maintain high accessibility standards throughout our development process.',
+    quoteKey: 'testimonials.items.mariaSantos.quote',
   },
   {
     name: 'Thomas Anderson',
-    role: 'Solutions Architect',
+    roleKey: 'testimonials.items.thomasAnderson.role',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=male-3',
-    quote: 'Scalability was our biggest concern, but this platform handles enterprise-level complexity with ease.',
+    quoteKey: 'testimonials.items.thomasAnderson.quote',
   },
   {
     name: 'Lisa Chang',
-    role: 'UX Researcher',
+    roleKey: 'testimonials.items.lisaChang.role',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=female-4',
-    quote:
-      'User testing results have been consistently positive since we adopted this platform. The user experience is intuitive and the performance is stellar. Our user satisfaction scores have increased by 40% since the migration.',
+    quoteKey: 'testimonials.items.lisaChang.quote',
   },
   {
     name: 'Michael Foster',
-    role: 'DevOps Engineer',
+    roleKey: 'testimonials.items.michaelFoster.role',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=male-4',
-    quote: 'Deployment and maintenance are a breeze. The platform integrates seamlessly with our CI/CD pipeline.',
+    quoteKey: 'testimonials.items.michaelFoster.quote',
   },
   {
     name: 'Sophie Laurent',
-    role: 'Creative Director',
+    roleKey: 'testimonials.items.sophieLaurent.role',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=female-5',
-    quote:
-      'The creative possibilities are endless. We can bring any design concept to life without compromising on technical quality or user experience.',
+    quoteKey: 'testimonials.items.sophieLaurent.quote',
   },
   {
     name: 'Daniel Wilson',
-    role: 'Backend Developer',
+    roleKey: 'testimonials.items.danielWilson.role',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=male-5',
-    quote: 'The API design is exceptional. Clean, intuitive, and well-documented.',
+    quoteKey: 'testimonials.items.danielWilson.quote',
   },
   {
     name: 'Natasha Petrov',
-    role: 'Mobile App Developer',
+    roleKey: 'testimonials.items.natashaPetrov.role',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=female-6',
-    quote:
-      'Cross-platform development has never been this efficient. One codebase, multiple platforms, consistent user experience. This is the future. The responsive design system ensures our apps look perfect on every device.',
+    quoteKey: 'testimonials.items.natashaPetrov.quote',
   },
   {
     name: 'Carlos Rivera',
-    role: 'Startup Founder',
+    roleKey: 'testimonials.items.carlosRivera.role',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=male-6',
-    quote: 'As a non-technical founder, this platform gave me the confidence to build our MVP quickly.',
+    quoteKey: 'testimonials.items.carlosRivera.quote',
   },
-]
+] as const
 
 export function TestimonialsSection() {
+  const { t } = useTranslation('landing')
+
   return (
     <section id="testimonials" className="py-24 sm:py-32">
       <div className="container mx-auto px-8 sm:px-6">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <Badge variant="outline" className="mb-4">Testimonials</Badge>
+          <Badge variant="outline" className="mb-4">{t('testimonials.badge')}</Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Empowering Innovation Worldwide
+            {t('testimonials.heading')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Join thousands of developers and teams who trust our platform to build exceptional digital experiences.
+            {t('testimonials.subheading')}
           </p>
         </div>
 
@@ -135,13 +126,13 @@ export function TestimonialsSection() {
                       <h3 className="font-medium hover:text-primary transition-colors">{testimonial.name}</h3>
                     </a>
                     <span className="text-muted-foreground block text-sm tracking-wide">
-                      {testimonial.role}
+                      {t(testimonial.roleKey)}
                     </span>
                   </div>
                 </div>
 
                 <blockquote className="mt-4">
-                  <p className="text-sm leading-relaxed text-balance">{testimonial.quote}</p>
+                  <p className="text-sm leading-relaxed text-balance">{t(testimonial.quoteKey)}</p>
                 </blockquote>
               </CardContent>
             </Card>

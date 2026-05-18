@@ -1,0 +1,474 @@
+{
+  "navbar": {
+    "nav": {
+      "home": "Home",
+      "features": "Features",
+      "solutions": "Solutions",
+      "team": "Team",
+      "pricing": "Pricing",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "solutions": {
+      "browseProducts": "Browse Products",
+      "freeBlocks": "Free Blocks",
+      "premiumTemplates": "Premium Templates",
+      "adminDashboards": "Admin Dashboards",
+      "landingPages": "Landing Pages",
+      "categories": "Categories",
+      "ecommerce": "E-commerce",
+      "saasDashboards": "SaaS Dashboards",
+      "analytics": "Analytics",
+      "authentication": "Authentication",
+      "resources": "Resources",
+      "documentation": "Documentation",
+      "componentShowcase": "Component Showcase",
+      "githubRepository": "GitHub Repository",
+      "designSystem": "Design System"
+    },
+    "dashboard": "Dashboard",
+    "signIn": "Sign In",
+    "getStarted": "Get Started",
+    "toggleMenu": "Toggle menu"
+  },
+  "hero": {
+    "badge": "New: Premium Template Collection",
+    "headline": "Build Better<1> Web Applications </1>with Ready-Made Components",
+    "subheading": "Accelerate your development with our curated collection of blocks, templates, landing pages, and admin dashboards. From free components to complete solutions, built with shadcn/ui.",
+    "getStartedFree": "Get Started Free",
+    "watchDemo": "Watch Demo",
+    "watchDemoVideo": "Watch demo video",
+    "dashboardPreviewLight": "Dashboard Preview - Light Mode",
+    "dashboardPreviewDark": "Dashboard Preview - Dark Mode"
+  },
+  "features": {
+    "badge": "Marketplace Features",
+    "heading": "Everything you need to build amazing web applications",
+    "subheading": "Our marketplace provides curated blocks, templates, landing pages, and admin dashboards to help you build professional applications faster than ever.",
+    "mainFeatures": {
+      "curatedLibrary": {
+        "title": "Curated Component Library",
+        "description": "Hand-picked blocks and templates for quality and reliability."
+      },
+      "freePremium": {
+        "title": "Free & Premium Options",
+        "description": "Start free, upgrade to premium collections when you need more."
+      },
+      "readyTemplates": {
+        "title": "Ready-to-Use Templates",
+        "description": "Copy-paste components that just work out of the box."
+      },
+      "regularUpdates": {
+        "title": "Regular Updates",
+        "description": "New blocks and templates added weekly to keep you current."
+      }
+    },
+    "secondaryFeatures": {
+      "multipleFrameworks": {
+        "title": "Multiple Frameworks",
+        "description": "React, Next.js, and Vite compatibility for flexible development."
+      },
+      "modernStack": {
+        "title": "Modern Tech Stack",
+        "description": "Built with shadcn/ui, Tailwind CSS, and TypeScript."
+      },
+      "responsiveDesign": {
+        "title": "Responsive Design",
+        "description": "Mobile-first components for all screen sizes and devices."
+      },
+      "developerFriendly": {
+        "title": "Developer-Friendly",
+        "description": "Clean code, well-documented, easy integration and customization."
+      }
+    },
+    "firstSection": {
+      "imageAlt": "Analytics dashboard",
+      "title": "Components that accelerate development",
+      "description": "Our curated marketplace offers premium blocks and templates designed to save time and ensure consistency across your admin projects.",
+      "browseTemplates": "Browse Templates",
+      "viewComponents": "View Components"
+    },
+    "secondSection": {
+      "title": "Built for modern development workflows",
+      "description": "Every component follows best practices with TypeScript, responsive design, and clean code architecture that integrates seamlessly into your projects.",
+      "viewDocumentation": "View Documentation",
+      "githubRepository": "GitHub Repository",
+      "imageAlt": "Performance dashboard"
+    }
+  },
+  "stats": {
+    "components": { "label": "Components", "description": "Ready-to-use blocks" },
+    "downloads": { "label": "Downloads", "description": "Trusted worldwide" },
+    "developers": { "label": "Developers", "description": "Active community" },
+    "rating": { "label": "Rating", "description": "User satisfaction" }
+  },
+  "about": {
+    "badge": "About ShadcnStore",
+    "heading": "Built for developers, by developers",
+    "subheading": "We're passionate about creating the best marketplace for shadcn/ui components and templates. Our mission is to accelerate development and help developers build beautiful admin interfaces faster.",
+    "values": {
+      "developerFirst": {
+        "title": "Developer First",
+        "description": "Every component is built with the developer experience in mind, ensuring clean code and easy integration."
+      },
+      "designExcellence": {
+        "title": "Design Excellence",
+        "description": "We maintain the highest design standards, following shadcn/ui principles and modern UI patterns."
+      },
+      "productionReady": {
+        "title": "Production Ready",
+        "description": "Battle-tested components used in real applications with proven performance and reliability across different environments."
+      },
+      "premiumQuality": {
+        "title": "Premium Quality",
+        "description": "Hand-crafted with attention to detail and performance optimization, ensuring exceptional user experience and accessibility."
+      }
+    },
+    "madeWithLove": "❤️ Made with love for the developer community",
+    "starOnGithub": "Star on GitHub",
+    "joinDiscord": "Join Discord Community"
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "heading": "Empowering Innovation Worldwide",
+    "subheading": "Join thousands of developers and teams who trust our platform to build exceptional digital experiences.",
+    "items": {
+      "alexandraMitchell": {
+        "role": "Senior Frontend Developer",
+        "quote": "This platform has completely transformed our development workflow. The component system is so well-architected that even complex applications feel simple to build."
+      },
+      "jamesThompson": {
+        "role": "Technical Lead",
+        "quote": "After trying countless frameworks, this is the one that finally clicked. The documentation is exceptional."
+      },
+      "priyaSharma": {
+        "role": "Product Designer",
+        "quote": "The design system is beautiful and consistent. I can prototype ideas quickly and hand them off to developers with confidence that the implementation will match perfectly."
+      },
+      "robertKim": {
+        "role": "Engineering Manager",
+        "quote": "We migrated our entire application to this platform in just two weeks. The performance improvements were immediate."
+      },
+      "mariaSantos": {
+        "role": "Full Stack Engineer",
+        "quote": "The accessibility features are top-notch. Building inclusive applications has never been easier. Every component follows best practices out of the box, and the automated testing suite ensures we maintain high accessibility standards throughout our development process."
+      },
+      "thomasAnderson": {
+        "role": "Solutions Architect",
+        "quote": "Scalability was our biggest concern, but this platform handles enterprise-level complexity with ease."
+      },
+      "lisaChang": {
+        "role": "UX Researcher",
+        "quote": "User testing results have been consistently positive since we adopted this platform. The user experience is intuitive and the performance is stellar. Our user satisfaction scores have increased by 40% since the migration."
+      },
+      "michaelFoster": {
+        "role": "DevOps Engineer",
+        "quote": "Deployment and maintenance are a breeze. The platform integrates seamlessly with our CI/CD pipeline."
+      },
+      "sophieLaurent": {
+        "role": "Creative Director",
+        "quote": "The creative possibilities are endless. We can bring any design concept to life without compromising on technical quality or user experience."
+      },
+      "danielWilson": {
+        "role": "Backend Developer",
+        "quote": "The API design is exceptional. Clean, intuitive, and well-documented."
+      },
+      "natashaPetrov": {
+        "role": "Mobile App Developer",
+        "quote": "Cross-platform development has never been this efficient. One codebase, multiple platforms, consistent user experience. This is the future. The responsive design system ensures our apps look perfect on every device."
+      },
+      "carlosRivera": {
+        "role": "Startup Founder",
+        "quote": "As a non-technical founder, this platform gave me the confidence to build our MVP quickly."
+      }
+    }
+  },
+  "pricing": {
+    "badge": "Pricing Plans",
+    "heading": "Choose your plan",
+    "subheading": "Start building with our free components or upgrade to Pro for access to premium templates and advanced features.",
+    "monthly": "Monthly",
+    "annually": "Annually",
+    "savingsNote": "<1>Save 20%</1> On Annual Billing",
+    "oneTimePayment": "One-time payment",
+    "perMonth": "Per month",
+    "enterpriseNote": "Need custom components or have questions? <1>Contact our team</1>",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "description": "Perfect for getting started with essential components",
+        "cta": "Get Started",
+        "features": {
+          "0": "Access to 50+ free components",
+          "1": "Basic dashboard templates",
+          "2": "Community support",
+          "3": "GitHub repository access",
+          "4": "Documentation and guides"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "For developers who need premium templates and components",
+        "cta": "Get Started",
+        "includesPrevious": "All Free features, plus",
+        "features": {
+          "0": "Premium template collection",
+          "1": "Advanced dashboard layouts",
+          "2": "Priority support",
+          "3": "Commercial use license",
+          "4": "Early access to new releases",
+          "5": "Figma design files",
+          "6": "Custom component requests",
+          "7": "Direct developer access",
+          "8": "Exclusive design resources"
+        }
+      },
+      "lifetime": {
+        "name": "Lifetime",
+        "description": "One-time payment for lifetime access to everything",
+        "cta": "Get Started",
+        "includesPrevious": "All Pro features, plus",
+        "features": {
+          "0": "Lifetime updates and support",
+          "1": "Private Discord channel",
+          "2": "No recurring fees ever",
+          "3": "Future template access",
+          "4": "VIP support priority",
+          "5": "Exclusive beta features"
+        }
+      }
+    }
+  },
+  "team": {
+    "badge": "Our Team",
+    "heading": "Meet our team",
+    "subheading": "We are a passionate team of innovators, builders, and problem-solvers dedicated to creating exceptional digital experiences that make a difference.",
+    "linkedinAriaLabel": "{{name}} LinkedIn",
+    "githubAriaLabel": "{{name}} GitHub",
+    "websiteAriaLabel": "{{name}} Website",
+    "members": {
+      "alexandraChen": {
+        "role": "Founder & CEO",
+        "description": "Former co-founder of TechFlow. Early staff at Microsoft and Google."
+      },
+      "marcusRodriguez": {
+        "role": "Engineering Manager",
+        "description": "Lead engineering teams at Stripe, Discord, and Meta Labs."
+      },
+      "sophieLaurent": {
+        "role": "Product Manager",
+        "description": "Former PM for Linear, Lambda School, and On Deck."
+      },
+      "davidKim": {
+        "role": "Frontend Developer",
+        "description": "Former frontend dev for Linear, Coinbase, and PostScript."
+      },
+      "emmaThompson": {
+        "role": "Backend Developer",
+        "description": "Lead backend dev at Clearbit. Former Clearbit and Loom."
+      },
+      "ryanMitchell": {
+        "role": "Product Designer",
+        "description": "Founding design team at Figma. Former Pleo, Stripe, and Tile."
+      },
+      "jamesAnderson": {
+        "role": "UX Researcher",
+        "description": "Lead user research for Slack. Contractor for Netflix and Udacity."
+      },
+      "isabellaGarcia": {
+        "role": "Customer Success",
+        "description": "Lead CX at Wealthsimple. Former PagerDuty and Squreen."
+      }
+    }
+  },
+  "faq": {
+    "badge": "FAQ",
+    "heading": "Frequently Asked Questions",
+    "subheading": "Everything you need to know about ShadcnStore components, licensing, and integration. Still have questions? We're here to help!",
+    "stillHaveQuestions": "Still have questions? We're here to help.",
+    "contactSupport": "Contact Support",
+    "items": {
+      "item1": {
+        "question": "How do I integrate ShadcnStore components into my project?",
+        "answer": "Integration is simple! All our components are built with shadcn/ui and work with React, Next.js, and Vite. Just copy the component code, install any required dependencies, and paste it into your project. Each component comes with detailed installation instructions and examples."
+      },
+      "item2": {
+        "question": "What's the difference between free and premium components?",
+        "answer": "Free components include essential UI elements like buttons, forms, and basic layouts. Premium components offer advanced features like complex data tables, analytics dashboards, authentication flows, and complete admin templates. Premium also includes Figma files, priority support, and commercial licenses."
+      },
+      "item3": {
+        "question": "Can I use these components in commercial projects?",
+        "answer": "Yes! Free components come with an MIT license for unlimited use. Premium components include a commercial license that allows usage in client projects, SaaS applications, and commercial products without attribution requirements."
+      },
+      "item4": {
+        "question": "Do you provide support and updates?",
+        "answer": "Absolutely! We provide community support for free components through our Discord server and GitHub issues. Premium subscribers get priority email support, regular component updates, and early access to new releases. We also maintain compatibility with the latest shadcn/ui versions."
+      },
+      "item5": {
+        "question": "What frameworks and tools do you support?",
+        "answer": "Our components work with React 18+, Next.js 13+, and Vite. We use TypeScript, Tailwind CSS, and follow shadcn/ui conventions. Components are tested with popular tools like React Hook Form, TanStack Query, and Zustand for state management."
+      },
+      "item6": {
+        "question": "How often do you release new components?",
+        "answer": "We release new components and templates weekly. Premium subscribers get early access to new releases, while free components are updated regularly based on community feedback. You can track our roadmap and request specific components through our GitHub repository."
+      }
+    }
+  },
+  "blog": {
+    "badge": "Latest Insights",
+    "heading": "From our blog",
+    "subheading": "Stay updated with the latest trends, best practices, and insights from our team of experts.",
+    "learnMore": "Learn More",
+    "posts": {
+      "first": {
+        "category": "Technology",
+        "title": "AI Development Catalysts",
+        "description": "Exploring how AI-driven tools are transforming software development workflows and accelerating innovation."
+      },
+      "second": {
+        "category": "Lifestyle",
+        "title": "Minimalist Living Guide",
+        "description": "Minimalist living approaches that can help reduce stress and create more meaningful daily experiences."
+      },
+      "third": {
+        "category": "Design",
+        "title": "Accessible UI Trends",
+        "description": "How modern UI trends are embracing accessibility while maintaining sleek, intuitive user experiences."
+      }
+    }
+  },
+  "contact": {
+    "badge": "Get In Touch",
+    "heading": "Need help or have questions?",
+    "subheading": "Our team is here to help you get the most out of ShadcnStore. Choose the best way to reach out to us.",
+    "discord": {
+      "title": "Discord Community",
+      "description": "Join our active community for quick help and discussions with other developers.",
+      "button": "Join Discord"
+    },
+    "github": {
+      "title": "GitHub Issues",
+      "description": "Report bugs, request features, or contribute to our open source repository.",
+      "button": "View on GitHub"
+    },
+    "documentation": {
+      "title": "Documentation",
+      "description": "Browse our comprehensive guides, tutorials, and component documentation.",
+      "button": "View Docs"
+    },
+    "form": {
+      "title": "Send us a message",
+      "firstName": "First name",
+      "firstNamePlaceholder": "John",
+      "lastName": "Last name",
+      "lastNamePlaceholder": "Doe",
+      "email": "Email",
+      "emailPlaceholder": "john@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Component request, bug report, general inquiry...",
+      "message": "Message",
+      "messagePlaceholder": "Tell us how we can help you with ShadcnStore components...",
+      "submit": "Send Message"
+    },
+    "validation": {
+      "firstName": "First name must be at least 2 characters.",
+      "lastName": "Last name must be at least 2 characters.",
+      "email": "Please enter a valid email address.",
+      "subject": "Subject must be at least 5 characters.",
+      "message": "Message must be at least 10 characters."
+    }
+  },
+  "cta": {
+    "badge": "Productivity Suite",
+    "blocksCount": "150+ Blocks",
+    "downloadsCount": "25K+ Downloads",
+    "ratingCount": "4.9★ Rating",
+    "headline": "Supercharge your team's <1><2>performance</2><3></3></1> today",
+    "subheading": "Stop building from scratch. Get production-ready components, templates and dashboards that integrate seamlessly with your shadcn/ui projects.",
+    "browseComponents": "Browse Components",
+    "viewOnGithub": "View on GitHub",
+    "trust": {
+      "freeComponents": "Free components available",
+      "commercialLicense": "Commercial license included",
+      "regularUpdates": "Regular updates & support"
+    }
+  },
+  "logoCarousel": {
+    "trustedBy": "Trusted by leading companies worldwide"
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Stay updated",
+      "description": "Get the latest updates, articles, and resources sent to your inbox weekly.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "invalidEmail": "Please enter a valid email address."
+    },
+    "brandDescription": "Accelerating web development with curated blocks, templates, landing pages, and admin dashboards designed for modern developers.",
+    "columns": {
+      "product": "Product",
+      "company": "Company",
+      "resources": "Resources",
+      "legal": "Legal"
+    },
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "api": "API",
+      "documentation": "Documentation",
+      "about": "About",
+      "blog": "Blog",
+      "careers": "Careers",
+      "press": "Press",
+      "helpCenter": "Help Center",
+      "community": "Community",
+      "guides": "Guides",
+      "webinars": "Webinars",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "security": "Security",
+      "status": "Status"
+    },
+    "madeWith": "Made with <1></1> by <2>ShadcnStore</2>",
+    "copyright": "© {{year}} for the developer community",
+    "bottomLinks": {
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "cookiePolicy": "Cookie Policy"
+    }
+  },
+  "themeCustomizer": {
+    "title": "Theme Customizer",
+    "description": "Customize the theme and colors of your landing page.",
+    "mode": "Mode",
+    "light": "Light",
+    "dark": "Dark",
+    "shadcnPresets": "Shadcn UI Theme Presets",
+    "random": "Random",
+    "chooseShadcnTheme": "Choose Shadcn Theme",
+    "tweakcnPresets": "Tweakcn Theme Presets",
+    "chooseTweakcnTheme": "Choose Tweakcn Theme",
+    "radius": "Radius",
+    "importTheme": "Import Theme",
+    "brandColors": "Brand Colors",
+    "advancedCustomization": "Advanced Customization",
+    "advancedDescription": "For advanced theme customization with real-time preview, visual color picker, and hundreds of prebuilt themes, visit <1>tweakcn.com</1>",
+    "openTweakcn": "Open Tweakcn"
+  },
+  "megaMenu": {
+    "descriptions": {
+      "freeBlocks": "Essential UI components and sections",
+      "premiumTemplates": "Complete page templates and layouts",
+      "adminDashboards": "Full-featured dashboard solutions",
+      "landingPages": "Marketing and product landing templates",
+      "ecommerce": "Online store admin panels and components",
+      "saasDashboards": "Application admin interfaces",
+      "analytics": "Data visualization and reporting templates",
+      "authentication": "Login, signup, and user management pages",
+      "documentation": "Integration guides and setup instructions",
+      "componentShowcase": "Interactive preview of all components",
+      "githubRepository": "Open source foundation and community",
+      "designSystem": "shadcn/ui standards and customization"
+    }
+  }
+}

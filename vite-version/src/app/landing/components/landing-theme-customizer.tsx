@@ -15,6 +15,7 @@ import { radiusOptions, baseColors } from '@/config/theme-customizer-constants'
 import { ColorPicker } from '@/components/color-picker'
 import { ImportModal } from '@/components/theme-customizer/import-modal'
 import { cn } from '@/lib/utils'
+import { Trans, useTranslation } from 'react-i18next'
 import type { ImportedTheme } from '@/types/theme-customizer'
 import "@/components/theme-customizer/circular-transition.css"
 
@@ -37,6 +38,7 @@ export function LandingThemeCustomizer({ open, onOpenChange }: LandingThemeCusto
   } = useThemeManager()
 
   const { toggleTheme } = useCircularTransition()
+  const { t } = useTranslation('landing')
 
   const [selectedTheme, setSelectedTheme] = React.useState("default")
   const [selectedTweakcnTheme, setSelectedTweakcnTheme] = React.useState("")
@@ -138,7 +140,7 @@ export function LandingThemeCustomizer({ open, onOpenChange }: LandingThemeCusto
               <div className="p-2 bg-primary/10 rounded-lg">
                 <Settings className="h-4 w-4" />
               </div>
-              <SheetTitle className="text-lg font-semibold">Theme Customizer</SheetTitle>
+              <SheetTitle className="text-lg font-semibold">{t('themeCustomizer.title')}</SheetTitle>
               <div className="ml-auto flex items-center gap-2">
                 <Button variant="outline" size="icon" onClick={handleReset} className="cursor-pointer h-8 w-8">
                   <RotateCcw className="h-4 w-4" />
@@ -149,14 +151,14 @@ export function LandingThemeCustomizer({ open, onOpenChange }: LandingThemeCusto
               </div>
             </div>
             <SheetDescription className="text-sm text-muted-foreground">
-              Customize the theme and colors of your landing page.
+              {t('themeCustomizer.description')}
             </SheetDescription>
           </SheetHeader>
 
           <div className="flex-1 overflow-y-auto p-4 space-y-6">
             {/* Mode Section */}
             <div className="space-y-3">
-              <Label className="text-sm font-medium">Mode</Label>
+              <Label className="text-sm font-medium">{t('themeCustomizer.mode')}</Label>
               <div className="grid grid-cols-2 gap-2">
                 <Button
                   variant={!isDarkMode ? "secondary" : "outline"}
@@ -165,7 +167,7 @@ export function LandingThemeCustomizer({ open, onOpenChange }: LandingThemeCusto
                   className="cursor-pointer mode-toggle-button relative overflow-hidden"
                 >
                   <Sun className="h-4 w-4 mr-1 transition-transform duration-300" />
-                  Light
+                  {t('themeCustomizer.light')}
                 </Button>
                 <Button
                   variant={isDarkMode ? "secondary" : "outline"}
@@ -174,7 +176,7 @@ export function LandingThemeCustomizer({ open, onOpenChange }: LandingThemeCusto
                   className="cursor-pointer mode-toggle-button relative overflow-hidden"
                 >
                   <Moon className="h-4 w-4 mr-1 transition-transform duration-300" />
-                  Dark
+                  {t('themeCustomizer.dark')}
                 </Button>
               </div>
             </div>
@@ -184,10 +186,10 @@ export function LandingThemeCustomizer({ open, onOpenChange }: LandingThemeCusto
             {/* Shadcn UI Theme Presets */}
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <Label className="text-sm font-medium">Shadcn UI Theme Presets</Label>
+                <Label className="text-sm font-medium">{t('themeCustomizer.shadcnPresets')}</Label>
                 <Button variant="outline" size="sm" onClick={handleRandomShadcn} className="cursor-pointer">
                   <Dices className="h-3.5 w-3.5 mr-1.5" />
-                  Random
+                  {t('themeCustomizer.random')}
                 </Button>
               </div>
 
@@ -199,7 +201,7 @@ export function LandingThemeCustomizer({ open, onOpenChange }: LandingThemeCusto
                 applyTheme(value, isDarkMode)
               }}>
                 <SelectTrigger className="w-full cursor-pointer">
-                  <SelectValue placeholder="Choose Shadcn Theme" />
+                  <SelectValue placeholder={t('themeCustomizer.chooseShadcnTheme')} />
                 </SelectTrigger>
                 <SelectContent className="max-h-60">
                   <div className="p-2">
@@ -238,10 +240,10 @@ export function LandingThemeCustomizer({ open, onOpenChange }: LandingThemeCusto
             {/* Tweakcn Theme Presets */}
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <Label className="text-sm font-medium">Tweakcn Theme Presets</Label>
+                <Label className="text-sm font-medium">{t('themeCustomizer.tweakcnPresets')}</Label>
                 <Button variant="outline" size="sm" onClick={handleRandomTweakcn} className="cursor-pointer">
                   <Dices className="h-3.5 w-3.5 mr-1.5" />
-                  Random
+                  {t('themeCustomizer.random')}
                 </Button>
               </div>
 
@@ -256,7 +258,7 @@ export function LandingThemeCustomizer({ open, onOpenChange }: LandingThemeCusto
                 }
               }}>
                 <SelectTrigger className="w-full cursor-pointer">
-                  <SelectValue placeholder="Choose Tweakcn Theme" />
+                  <SelectValue placeholder={t('themeCustomizer.chooseTweakcnTheme')} />
                 </SelectTrigger>
                 <SelectContent className="max-h-60">
                   <div className="p-2">
@@ -294,7 +296,7 @@ export function LandingThemeCustomizer({ open, onOpenChange }: LandingThemeCusto
 
             {/* Radius Selection */}
             <div className="space-y-3">
-              <Label className="text-sm font-medium">Radius</Label>
+              <Label className="text-sm font-medium">{t('themeCustomizer.radius')}</Label>
               <div className="grid grid-cols-5 gap-2">
                 {radiusOptions.map((option) => (
                   <div
@@ -325,7 +327,7 @@ export function LandingThemeCustomizer({ open, onOpenChange }: LandingThemeCusto
                 className="w-full cursor-pointer"
               >
                 <Upload className="h-3.5 w-3.5 mr-1.5" />
-                Import Theme
+                {t('themeCustomizer.importTheme')}
               </Button>
             </div>
 
@@ -333,7 +335,7 @@ export function LandingThemeCustomizer({ open, onOpenChange }: LandingThemeCusto
             <Accordion type="single" collapsible className="w-full border-b rounded-lg">
               <AccordionItem value="brand-colors" className="border border-border rounded-lg overflow-hidden">
                 <AccordionTrigger className="px-4 py-3 hover:no-underline hover:bg-muted/50 transition-colors">
-                  <Label className="text-sm font-medium cursor-pointer">Brand Colors</Label>
+                  <Label className="text-sm font-medium cursor-pointer">{t('themeCustomizer.brandColors')}</Label>
                 </AccordionTrigger>
                 <AccordionContent className="px-4 pb-4 pt-2 space-y-3 border-t border-border bg-muted/20">
                   {baseColors.map((color) => (
@@ -354,18 +356,23 @@ export function LandingThemeCustomizer({ open, onOpenChange }: LandingThemeCusto
             <div className="p-4 bg-muted rounded-lg space-y-3">
               <div className="flex items-center gap-2">
                 <Palette className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium">Advanced Customization</span>
+                <span className="text-sm font-medium">{t('themeCustomizer.advancedCustomization')}</span>
               </div>
               <p className="text-xs text-muted-foreground">
-                For advanced theme customization with real-time preview, visual color picker, and hundreds of prebuilt themes, visit{" "}
-                <a
-                  href="https://tweakcn.com/editor/theme"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline font-medium cursor-pointer"
-                >
-                  tweakcn.com
-                </a>
+                <Trans
+                  i18nKey="themeCustomizer.advancedDescription"
+                  ns="landing"
+                  components={{
+                    1: (
+                      <a
+                        href="https://tweakcn.com/editor/theme"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline font-medium cursor-pointer"
+                      />
+                    ),
+                  }}
+                />
               </p>
               <Button
                 variant="outline"
@@ -374,7 +381,7 @@ export function LandingThemeCustomizer({ open, onOpenChange }: LandingThemeCusto
                 onClick={() => window.open('https://tweakcn.com/editor/theme', '_blank')}
               >
                 <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
-                Open Tweakcn
+                {t('themeCustomizer.openTweakcn')}
               </Button>
             </div>
           </div>

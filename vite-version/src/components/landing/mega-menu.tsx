@@ -13,124 +13,70 @@ import {
   Crown,
   Palette
 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
+// `titleKey`/`nameKey`/`descriptionKey` hold full i18n keys (landing namespace).
+// Section titles and item names reuse the navbar.solutions.* keys.
+// `as const` keeps each key as a literal type for the type-safe t().
 const menuSections = [
   {
-    title: 'Browse Products',
+    titleKey: 'navbar.solutions.browseProducts',
     items: [
-      {
-        title: 'Free Blocks',
-        description: 'Essential UI components and sections',
-        icon: Package,
-        href: '#free-blocks'
-      },
-      {
-        title: 'Premium Templates',
-        description: 'Complete page templates and layouts',
-        icon: Crown,
-        href: '#premium-templates'
-      },
-      {
-        title: 'Admin Dashboards',
-        description: 'Full-featured dashboard solutions',
-        icon: BarChart3,
-        href: '#admin-dashboards'
-      },
-      {
-        title: 'Landing Pages',
-        description: 'Marketing and product landing templates',
-        icon: Layout,
-        href: '#landing-pages'
-      }
-    ]
+      { nameKey: 'navbar.solutions.freeBlocks', descriptionKey: 'megaMenu.descriptions.freeBlocks', icon: Package, href: '#free-blocks' },
+      { nameKey: 'navbar.solutions.premiumTemplates', descriptionKey: 'megaMenu.descriptions.premiumTemplates', icon: Crown, href: '#premium-templates' },
+      { nameKey: 'navbar.solutions.adminDashboards', descriptionKey: 'megaMenu.descriptions.adminDashboards', icon: BarChart3, href: '#admin-dashboards' },
+      { nameKey: 'navbar.solutions.landingPages', descriptionKey: 'megaMenu.descriptions.landingPages', icon: Layout, href: '#landing-pages' },
+    ],
   },
   {
-    title: 'Categories',
+    titleKey: 'navbar.solutions.categories',
     items: [
-      {
-        title: 'E-commerce',
-        description: 'Online store admin panels and components',
-        icon: Building2,
-        href: '#ecommerce'
-      },
-      {
-        title: 'SaaS Dashboards',
-        description: 'Application admin interfaces',
-        icon: Rocket,
-        href: '#saas-dashboards'
-      },
-      {
-        title: 'Analytics',
-        description: 'Data visualization and reporting templates',
-        icon: BarChart3,
-        href: '#analytics'
-      },
-      {
-        title: 'Authentication',
-        description: 'Login, signup, and user management pages',
-        icon: Shield,
-        href: '#authentication'
-      }
-    ]
+      { nameKey: 'navbar.solutions.ecommerce', descriptionKey: 'megaMenu.descriptions.ecommerce', icon: Building2, href: '#ecommerce' },
+      { nameKey: 'navbar.solutions.saasDashboards', descriptionKey: 'megaMenu.descriptions.saasDashboards', icon: Rocket, href: '#saas-dashboards' },
+      { nameKey: 'navbar.solutions.analytics', descriptionKey: 'megaMenu.descriptions.analytics', icon: BarChart3, href: '#analytics' },
+      { nameKey: 'navbar.solutions.authentication', descriptionKey: 'megaMenu.descriptions.authentication', icon: Shield, href: '#authentication' },
+    ],
   },
   {
-    title: 'Resources',
+    titleKey: 'navbar.solutions.resources',
     items: [
-      {
-        title: 'Documentation',
-        description: 'Integration guides and setup instructions',
-        icon: Database,
-        href: '#docs'
-      },
-      {
-        title: 'Component Showcase',
-        description: 'Interactive preview of all components',
-        icon: Palette,
-        href: '#showcase'
-      },
-      {
-        title: 'GitHub Repository',
-        description: 'Open source foundation and community',
-        icon: Settings,
-        href: '#github'
-      },
-      {
-        title: 'Design System',
-        description: 'shadcn/ui standards and customization',
-        icon: Zap,
-        href: '#design-system'
-      }
-    ]
-  }
-]
+      { nameKey: 'navbar.solutions.documentation', descriptionKey: 'megaMenu.descriptions.documentation', icon: Database, href: '#docs' },
+      { nameKey: 'navbar.solutions.componentShowcase', descriptionKey: 'megaMenu.descriptions.componentShowcase', icon: Palette, href: '#showcase' },
+      { nameKey: 'navbar.solutions.githubRepository', descriptionKey: 'megaMenu.descriptions.githubRepository', icon: Settings, href: '#github' },
+      { nameKey: 'navbar.solutions.designSystem', descriptionKey: 'megaMenu.descriptions.designSystem', icon: Zap, href: '#design-system' },
+    ],
+  },
+] as const
 
 export function MegaMenu() {
+  const { t } = useTranslation('landing')
+
   return (
     <div className="w-[700px] max-w-[95vw] p-4 sm:p-6 lg:p-8 bg-background">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
         {menuSections.map((section) => (
-          <div key={section.title} className="space-y-4 lg:space-y-6">
+          <div key={section.titleKey} className="space-y-4 lg:space-y-6">
             {/* Section Header */}
             <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
-              {section.title}
+              {t(section.titleKey)}
             </h3>
 
             {/* Section Links */}
             <div className="space-y-3 lg:space-y-4">
               {section.items.map((item) => (
                 <a
-                  key={item.title}
+                  key={item.nameKey}
                   href={item.href}
                   className="group block space-y-1 lg:space-y-2 hover:bg-accent rounded-md p-2 lg:p-3 -mx-2 lg:-mx-3 transition-colors my-0"
                 >
                   <div className="flex items-center gap-2 lg:gap-3">
                     <item.icon className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                     <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                      {item.title}
+                      {t(item.nameKey)}
                     </span>
                   </div>
                   <p className="text-xs text-muted-foreground leading-relaxed ml-6 lg:ml-7">
-                    {item.description}
+                    {t(item.descriptionKey)}
                   </p>
                 </a>
               ))}

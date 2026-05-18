@@ -14,65 +14,70 @@ import {
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Image3D } from '@/components/image-3d'
+import { useTranslation } from 'react-i18next'
 
+// `titleKey`/`descriptionKey` hold full i18n keys (landing namespace).
+// `as const` keeps each key as a literal type for the type-safe t().
 const mainFeatures = [
   {
     icon: Package,
-    title: 'Curated Component Library',
-    description: 'Hand-picked blocks and templates for quality and reliability.'
+    titleKey: 'features.mainFeatures.curatedLibrary.title',
+    descriptionKey: 'features.mainFeatures.curatedLibrary.description'
   },
   {
     icon: Crown,
-    title: 'Free & Premium Options',
-    description: 'Start free, upgrade to premium collections when you need more.'
+    titleKey: 'features.mainFeatures.freePremium.title',
+    descriptionKey: 'features.mainFeatures.freePremium.description'
   },
   {
     icon: Layout,
-    title: 'Ready-to-Use Templates',
-    description: 'Copy-paste components that just work out of the box.'
+    titleKey: 'features.mainFeatures.readyTemplates.title',
+    descriptionKey: 'features.mainFeatures.readyTemplates.description'
   },
   {
     icon: Zap,
-    title: 'Regular Updates',
-    description: 'New blocks and templates added weekly to keep you current.'
+    titleKey: 'features.mainFeatures.regularUpdates.title',
+    descriptionKey: 'features.mainFeatures.regularUpdates.description'
   }
-]
+] as const
 
 const secondaryFeatures = [
   {
     icon: BarChart3,
-    title: 'Multiple Frameworks',
-    description: 'React, Next.js, and Vite compatibility for flexible development.'
+    titleKey: 'features.secondaryFeatures.multipleFrameworks.title',
+    descriptionKey: 'features.secondaryFeatures.multipleFrameworks.description'
   },
   {
     icon: Palette,
-    title: 'Modern Tech Stack',
-    description: 'Built with shadcn/ui, Tailwind CSS, and TypeScript.'
+    titleKey: 'features.secondaryFeatures.modernStack.title',
+    descriptionKey: 'features.secondaryFeatures.modernStack.description'
   },
   {
     icon: Users,
-    title: 'Responsive Design',
-    description: 'Mobile-first components for all screen sizes and devices.'
+    titleKey: 'features.secondaryFeatures.responsiveDesign.title',
+    descriptionKey: 'features.secondaryFeatures.responsiveDesign.description'
   },
   {
     icon: Database,
-    title: 'Developer-Friendly',
-    description: 'Clean code, well-documented, easy integration and customization.'
+    titleKey: 'features.secondaryFeatures.developerFriendly.title',
+    descriptionKey: 'features.secondaryFeatures.developerFriendly.description'
   }
-]
+] as const
 
 export function FeaturesSection() {
+  const { t } = useTranslation('landing')
+
   return (
     <section id="features" className="py-24 sm:py-32 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <Badge variant="outline" className="mb-4">Marketplace Features</Badge>
+          <Badge variant="outline" className="mb-4">{t('features.badge')}</Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Everything you need to build amazing web applications
+            {t('features.heading')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our marketplace provides curated blocks, templates, landing pages, and admin dashboards to help you build professional applications faster than ever.
+            {t('features.subheading')}
           </p>
         </div>
 
@@ -82,17 +87,17 @@ export function FeaturesSection() {
           <Image3D
             lightSrc="feature-1-light.png"
             darkSrc="feature-1-dark.png"
-            alt="Analytics dashboard"
+            alt={t('features.firstSection.imageAlt')}
             direction="left"
           />
           {/* Right Content */}
           <div className="space-y-6">
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl">
-                Components that accelerate development
+                {t('features.firstSection.title')}
               </h3>
               <p className="text-muted-foreground text-base text-pretty">
-                Our curated marketplace offers premium blocks and templates designed to save time and ensure consistency across your admin projects.
+                {t('features.firstSection.description')}
               </p>
             </div>
 
@@ -103,8 +108,8 @@ export function FeaturesSection() {
                     <feature.icon className="size-5 text-primary" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="text-foreground font-medium">{feature.title}</h3>
-                    <p className="text-muted-foreground mt-1 text-sm">{feature.description}</p>
+                    <h3 className="text-foreground font-medium">{t(feature.titleKey)}</h3>
+                    <p className="text-muted-foreground mt-1 text-sm">{t(feature.descriptionKey)}</p>
                   </div>
                 </li>
               ))}
@@ -113,13 +118,13 @@ export function FeaturesSection() {
             <div className="flex flex-col sm:flex-row gap-4 pe-4 pt-2">
               <Button size="lg" className="cursor-pointer">
                 <a href="https://shadcnstore.com/templates" className='flex items-center'>
-                  Browse Templates
+                  {t('features.firstSection.browseTemplates')}
                   <ArrowRight className="ms-2 size-4" aria-hidden="true" />
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="cursor-pointer">
                 <a href="https://shadcnstore.com/blocks">
-                  View Components
+                  {t('features.firstSection.viewComponents')}
                 </a>
               </Button>
             </div>
@@ -132,10 +137,10 @@ export function FeaturesSection() {
           <div className="space-y-6 order-2 lg:order-1">
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl">
-                Built for modern development workflows
+                {t('features.secondSection.title')}
               </h3>
               <p className="text-muted-foreground text-base text-pretty">
-                Every component follows best practices with TypeScript, responsive design, and clean code architecture that integrates seamlessly into your projects.
+                {t('features.secondSection.description')}
               </p>
             </div>
 
@@ -146,8 +151,8 @@ export function FeaturesSection() {
                     <feature.icon className="size-5 text-primary" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="text-foreground font-medium">{feature.title}</h3>
-                    <p className="text-muted-foreground mt-1 text-sm">{feature.description}</p>
+                    <h3 className="text-foreground font-medium">{t(feature.titleKey)}</h3>
+                    <p className="text-muted-foreground mt-1 text-sm">{t(feature.descriptionKey)}</p>
                   </div>
                 </li>
               ))}
@@ -156,13 +161,13 @@ export function FeaturesSection() {
             <div className="flex flex-col sm:flex-row gap-4 pe-4 pt-2">
               <Button size="lg" className="cursor-pointer">
                 <a href="#" className='flex items-center'>
-                  View Documentation
+                  {t('features.secondSection.viewDocumentation')}
                   <ArrowRight className="ms-2 size-4" aria-hidden="true" />
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="cursor-pointer">
                 <a href="https://github.com/silicondeck/shadcn-dashboard-landing-template" target="_blank" rel="noopener noreferrer">
-                  GitHub Repository
+                  {t('features.secondSection.githubRepository')}
                 </a>
               </Button>
             </div>
@@ -172,7 +177,7 @@ export function FeaturesSection() {
           <Image3D
             lightSrc="feature-2-light.png"
             darkSrc="feature-2-dark.png"
-            alt="Performance dashboard"
+            alt={t('features.secondSection.imageAlt')}
             direction="right"
             className="order-1 lg:order-2"
           />

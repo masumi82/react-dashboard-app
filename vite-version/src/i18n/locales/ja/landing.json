@@ -1,0 +1,474 @@
+{
+  "navbar": {
+    "nav": {
+      "home": "ホーム",
+      "features": "機能",
+      "solutions": "ソリューション",
+      "team": "チーム",
+      "pricing": "料金",
+      "faq": "よくある質問",
+      "contact": "お問い合わせ"
+    },
+    "solutions": {
+      "browseProducts": "製品を見る",
+      "freeBlocks": "無料ブロック",
+      "premiumTemplates": "プレミアムテンプレート",
+      "adminDashboards": "管理ダッシュボード",
+      "landingPages": "ランディングページ",
+      "categories": "カテゴリー",
+      "ecommerce": "Eコマース",
+      "saasDashboards": "SaaSダッシュボード",
+      "analytics": "アナリティクス",
+      "authentication": "認証",
+      "resources": "リソース",
+      "documentation": "ドキュメント",
+      "componentShowcase": "コンポーネントショーケース",
+      "githubRepository": "GitHubリポジトリ",
+      "designSystem": "デザインシステム"
+    },
+    "dashboard": "ダッシュボード",
+    "signIn": "ログイン",
+    "getStarted": "始める",
+    "toggleMenu": "メニューを開閉"
+  },
+  "hero": {
+    "badge": "新着：プレミアムテンプレート集",
+    "headline": "既製コンポーネントで<1>優れたWebアプリ</1>を構築",
+    "subheading": "厳選したブロック・テンプレート・ランディングページ・管理ダッシュボードのコレクションで開発を加速。無料コンポーネントから完全なソリューションまで、すべて shadcn/ui で構築されています。",
+    "getStartedFree": "無料で始める",
+    "watchDemo": "デモを見る",
+    "watchDemoVideo": "デモ動画を見る",
+    "dashboardPreviewLight": "ダッシュボードプレビュー - ライトモード",
+    "dashboardPreviewDark": "ダッシュボードプレビュー - ダークモード"
+  },
+  "features": {
+    "badge": "マーケットプレイスの特長",
+    "heading": "魅力的なWebアプリの構築に必要なすべてが揃う",
+    "subheading": "厳選されたブロック・テンプレート・ランディングページ・管理ダッシュボードを提供し、プロ品質のアプリをこれまでより速く構築できます。",
+    "mainFeatures": {
+      "curatedLibrary": {
+        "title": "厳選コンポーネントライブラリ",
+        "description": "品質と信頼性を重視して厳選したブロックとテンプレート。"
+      },
+      "freePremium": {
+        "title": "無料＆プレミアムの選択肢",
+        "description": "まずは無料で始め、必要に応じてプレミアムコレクションへ。"
+      },
+      "readyTemplates": {
+        "title": "すぐに使えるテンプレート",
+        "description": "コピー＆ペーストでそのまま動くコンポーネント。"
+      },
+      "regularUpdates": {
+        "title": "定期的なアップデート",
+        "description": "毎週新しいブロックとテンプレートを追加し、常に最新の状態に。"
+      }
+    },
+    "secondaryFeatures": {
+      "multipleFrameworks": {
+        "title": "複数のフレームワーク対応",
+        "description": "React・Next.js・Vite に対応し、柔軟に開発できます。"
+      },
+      "modernStack": {
+        "title": "モダンな技術スタック",
+        "description": "shadcn/ui・Tailwind CSS・TypeScript で構築。"
+      },
+      "responsiveDesign": {
+        "title": "レスポンシブデザイン",
+        "description": "あらゆる画面サイズとデバイスに対応するモバイルファースト設計。"
+      },
+      "developerFriendly": {
+        "title": "開発者にやさしい",
+        "description": "クリーンなコードと充実したドキュメントで、統合もカスタマイズも簡単。"
+      }
+    },
+    "firstSection": {
+      "imageAlt": "アナリティクスダッシュボード",
+      "title": "開発を加速するコンポーネント",
+      "description": "厳選されたマーケットプレイスが、時間を節約し管理プロジェクト全体で一貫性を保つプレミアムなブロックとテンプレートを提供します。",
+      "browseTemplates": "テンプレートを見る",
+      "viewComponents": "コンポーネントを見る"
+    },
+    "secondSection": {
+      "title": "モダンな開発ワークフローのために",
+      "description": "すべてのコンポーネントが TypeScript・レスポンシブデザイン・クリーンなコード設計のベストプラクティスに従い、プロジェクトにシームレスに統合できます。",
+      "viewDocumentation": "ドキュメントを見る",
+      "githubRepository": "GitHubリポジトリ",
+      "imageAlt": "パフォーマンスダッシュボード"
+    }
+  },
+  "stats": {
+    "components": { "label": "コンポーネント", "description": "すぐに使えるブロック" },
+    "downloads": { "label": "ダウンロード", "description": "世界中で信頼されています" },
+    "developers": { "label": "開発者", "description": "活発なコミュニティ" },
+    "rating": { "label": "評価", "description": "ユーザー満足度" }
+  },
+  "about": {
+    "badge": "ShadcnStore について",
+    "heading": "開発者による、開発者のためのプロダクト",
+    "subheading": "私たちは shadcn/ui のコンポーネントとテンプレートの最高のマーケットプレイスを作ることに情熱を注いでいます。開発を加速し、開発者が美しい管理画面をより速く構築できるよう支援することが私たちの使命です。",
+    "values": {
+      "developerFirst": {
+        "title": "開発者ファースト",
+        "description": "すべてのコンポーネントは開発体験を第一に考えて作られ、クリーンなコードと簡単な統合を実現します。"
+      },
+      "designExcellence": {
+        "title": "卓越したデザイン",
+        "description": "shadcn/ui の原則とモダンな UI パターンに従い、最高水準のデザインを維持しています。"
+      },
+      "productionReady": {
+        "title": "本番環境対応",
+        "description": "実際のアプリケーションで使われ、さまざまな環境で実証済みのパフォーマンスと信頼性を備えています。"
+      },
+      "premiumQuality": {
+        "title": "プレミアム品質",
+        "description": "細部へのこだわりとパフォーマンス最適化で丁寧に作り込み、優れたユーザー体験とアクセシビリティを実現します。"
+      }
+    },
+    "madeWithLove": "❤️ 開発者コミュニティへの愛を込めて",
+    "starOnGithub": "GitHub でスターを付ける",
+    "joinDiscord": "Discord コミュニティに参加"
+  },
+  "testimonials": {
+    "badge": "お客様の声",
+    "heading": "世界中のイノベーションを支える",
+    "subheading": "卓越したデジタル体験を構築するために私たちのプラットフォームを信頼する、数千人の開発者とチームに加わりましょう。",
+    "items": {
+      "alexandraMitchell": {
+        "role": "シニアフロントエンド開発者",
+        "quote": "このプラットフォームは私たちの開発ワークフローを完全に変えました。コンポーネントシステムの設計が非常に優れていて、複雑なアプリケーションでも簡単に構築できると感じられます。"
+      },
+      "jamesThompson": {
+        "role": "テクニカルリード",
+        "quote": "数えきれないほどのフレームワークを試した末に、ようやくしっくりきたのがこれです。ドキュメントも非常に充実しています。"
+      },
+      "priyaSharma": {
+        "role": "プロダクトデザイナー",
+        "quote": "デザインシステムが美しく一貫しています。アイデアをすばやくプロトタイプ化し、実装がそのまま一致する確信を持って開発者に引き継げます。"
+      },
+      "robertKim": {
+        "role": "エンジニアリングマネージャー",
+        "quote": "アプリケーション全体をわずか2週間でこのプラットフォームに移行できました。パフォーマンスの向上もすぐに実感できました。"
+      },
+      "mariaSantos": {
+        "role": "フルスタックエンジニア",
+        "quote": "アクセシビリティ機能が一級品です。インクルーシブなアプリケーションの構築がこれほど簡単になったことはありません。すべてのコンポーネントが標準でベストプラクティスに従い、自動テストスイートが開発プロセス全体で高いアクセシビリティ水準を保ちます。"
+      },
+      "thomasAnderson": {
+        "role": "ソリューションアーキテクト",
+        "quote": "スケーラビリティが最大の懸念でしたが、このプラットフォームはエンタープライズ規模の複雑さも難なく扱います。"
+      },
+      "lisaChang": {
+        "role": "UXリサーチャー",
+        "quote": "このプラットフォームを採用して以来、ユーザーテストの結果は一貫して良好です。ユーザー体験は直感的で、パフォーマンスも抜群です。移行以降、ユーザー満足度スコアは40%向上しました。"
+      },
+      "michaelFoster": {
+        "role": "DevOpsエンジニア",
+        "quote": "デプロイもメンテナンスも非常に簡単です。CI/CDパイプラインともシームレスに統合できます。"
+      },
+      "sophieLaurent": {
+        "role": "クリエイティブディレクター",
+        "quote": "クリエイティブな可能性は無限大です。技術的な品質やユーザー体験を損なうことなく、どんなデザインコンセプトも形にできます。"
+      },
+      "danielWilson": {
+        "role": "バックエンド開発者",
+        "quote": "API設計が秀逸です。クリーンで直感的、そしてドキュメントも充実しています。"
+      },
+      "natashaPetrov": {
+        "role": "モバイルアプリ開発者",
+        "quote": "クロスプラットフォーム開発がこれほど効率的になったことはありません。1つのコードベースで複数のプラットフォームに対応し、一貫したユーザー体験を提供できます。これが未来です。レスポンシブデザインシステムにより、あらゆるデバイスでアプリが完璧に表示されます。"
+      },
+      "carlosRivera": {
+        "role": "スタートアップ創業者",
+        "quote": "技術者でない創業者の私でも、このプラットフォームのおかげで MVP をすばやく構築する自信が持てました。"
+      }
+    }
+  },
+  "pricing": {
+    "badge": "料金プラン",
+    "heading": "プランを選択",
+    "subheading": "無料コンポーネントで構築を始めるか、Pro にアップグレードしてプレミアムテンプレートと高度な機能をご利用ください。",
+    "monthly": "月額",
+    "annually": "年額",
+    "savingsNote": "<1>20%お得</1> 年額請求の場合",
+    "oneTimePayment": "買い切り",
+    "perMonth": "月あたり",
+    "enterpriseNote": "カスタムコンポーネントが必要、またはご質問がありますか？ <1>チームへお問い合わせ</1>",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "description": "必要不可欠なコンポーネントで気軽に始められるプラン",
+        "cta": "始める",
+        "features": {
+          "0": "50以上の無料コンポーネントへのアクセス",
+          "1": "基本的なダッシュボードテンプレート",
+          "2": "コミュニティサポート",
+          "3": "GitHubリポジトリへのアクセス",
+          "4": "ドキュメントとガイド"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "プレミアムなテンプレートとコンポーネントを求める開発者向け",
+        "cta": "始める",
+        "includesPrevious": "Free のすべての機能に加えて",
+        "features": {
+          "0": "プレミアムテンプレートコレクション",
+          "1": "高度なダッシュボードレイアウト",
+          "2": "優先サポート",
+          "3": "商用利用ライセンス",
+          "4": "新リリースへの早期アクセス",
+          "5": "Figma デザインファイル",
+          "6": "カスタムコンポーネントのリクエスト",
+          "7": "開発者への直接アクセス",
+          "8": "限定デザインリソース"
+        }
+      },
+      "lifetime": {
+        "name": "Lifetime",
+        "description": "すべてに永続的にアクセスできる買い切りプラン",
+        "cta": "始める",
+        "includesPrevious": "Pro のすべての機能に加えて",
+        "features": {
+          "0": "生涯のアップデートとサポート",
+          "1": "プライベート Discord チャンネル",
+          "2": "継続課金は一切なし",
+          "3": "今後のテンプレートへのアクセス",
+          "4": "VIP優先サポート",
+          "5": "限定ベータ機能"
+        }
+      }
+    }
+  },
+  "team": {
+    "badge": "私たちのチーム",
+    "heading": "チームのご紹介",
+    "subheading": "私たちは、変化を生み出す卓越したデジタル体験の創造に情熱を注ぐ、イノベーター・ビルダー・問題解決者のチームです。",
+    "linkedinAriaLabel": "{{name}}のLinkedIn",
+    "githubAriaLabel": "{{name}}のGitHub",
+    "websiteAriaLabel": "{{name}}のウェブサイト",
+    "members": {
+      "alexandraChen": {
+        "role": "創業者兼CEO",
+        "description": "TechFlow の元共同創業者。Microsoft と Google の初期メンバー。"
+      },
+      "marcusRodriguez": {
+        "role": "エンジニアリングマネージャー",
+        "description": "Stripe、Discord、Meta Labs でエンジニアリングチームを率いる。"
+      },
+      "sophieLaurent": {
+        "role": "プロダクトマネージャー",
+        "description": "Linear、Lambda School、On Deck の元プロダクトマネージャー。"
+      },
+      "davidKim": {
+        "role": "フロントエンド開発者",
+        "description": "Linear、Coinbase、PostScript の元フロントエンド開発者。"
+      },
+      "emmaThompson": {
+        "role": "バックエンド開発者",
+        "description": "Clearbit のバックエンド開発リード。Clearbit と Loom 出身。"
+      },
+      "ryanMitchell": {
+        "role": "プロダクトデザイナー",
+        "description": "Figma の創設デザインチーム。Pleo、Stripe、Tile 出身。"
+      },
+      "jamesAnderson": {
+        "role": "UXリサーチャー",
+        "description": "Slack のユーザーリサーチを主導。Netflix と Udacity の業務委託。"
+      },
+      "isabellaGarcia": {
+        "role": "カスタマーサクセス",
+        "description": "Wealthsimple の CX リード。PagerDuty と Squreen 出身。"
+      }
+    }
+  },
+  "faq": {
+    "badge": "FAQ",
+    "heading": "よくある質問",
+    "subheading": "ShadcnStore のコンポーネント、ライセンス、統合について知っておきたいことのすべて。まだ疑問がありますか？ お気軽にお問い合わせください！",
+    "stillHaveQuestions": "まだ疑問がありますか？ お気軽にお問い合わせください。",
+    "contactSupport": "サポートに問い合わせる",
+    "items": {
+      "item1": {
+        "question": "ShadcnStore のコンポーネントを自分のプロジェクトに統合するには？",
+        "answer": "統合はとても簡単です。すべてのコンポーネントは shadcn/ui で構築され、React・Next.js・Vite で動作します。コンポーネントのコードをコピーし、必要な依存関係をインストールして、プロジェクトに貼り付けるだけです。各コンポーネントには詳しいインストール手順と例が付属しています。"
+      },
+      "item2": {
+        "question": "無料コンポーネントとプレミアムコンポーネントの違いは？",
+        "answer": "無料コンポーネントには、ボタン・フォーム・基本レイアウトなどの必須 UI 要素が含まれます。プレミアムコンポーネントは、複雑なデータテーブル、アナリティクスダッシュボード、認証フロー、完全な管理テンプレートなどの高度な機能を提供します。プレミアムには Figma ファイル、優先サポート、商用ライセンスも含まれます。"
+      },
+      "item3": {
+        "question": "これらのコンポーネントを商用プロジェクトで使えますか？",
+        "answer": "はい！ 無料コンポーネントには MIT ライセンスが付属し、無制限に利用できます。プレミアムコンポーネントには商用ライセンスが含まれ、クライアントプロジェクト、SaaS アプリケーション、商用製品で帰属表示なしに利用できます。"
+      },
+      "item4": {
+        "question": "サポートやアップデートは提供されますか？",
+        "answer": "もちろんです！ 無料コンポーネントについては、Discord サーバーと GitHub Issues を通じてコミュニティサポートを提供しています。プレミアム購読者は、優先メールサポート、定期的なコンポーネントのアップデート、新リリースへの早期アクセスを受けられます。最新の shadcn/ui バージョンとの互換性も維持しています。"
+      },
+      "item5": {
+        "question": "対応しているフレームワークやツールは？",
+        "answer": "コンポーネントは React 18+、Next.js 13+、Vite で動作します。TypeScript と Tailwind CSS を使用し、shadcn/ui の規約に従っています。コンポーネントは React Hook Form、TanStack Query、状態管理の Zustand など、人気のツールでテストされています。"
+      },
+      "item6": {
+        "question": "新しいコンポーネントはどのくらいの頻度でリリースされますか？",
+        "answer": "新しいコンポーネントとテンプレートを毎週リリースしています。プレミアム購読者は新リリースへ早期にアクセスでき、無料コンポーネントもコミュニティのフィードバックに基づいて定期的に更新されます。ロードマップの確認や特定のコンポーネントのリクエストは GitHub リポジトリから行えます。"
+      }
+    }
+  },
+  "blog": {
+    "badge": "最新のインサイト",
+    "heading": "ブログ",
+    "subheading": "最新のトレンド、ベストプラクティス、専門家チームによるインサイトを随時お届けします。",
+    "learnMore": "詳しく見る",
+    "posts": {
+      "first": {
+        "category": "テクノロジー",
+        "title": "AI開発のカタリスト",
+        "description": "AI を活用したツールがソフトウェア開発のワークフローをどう変革し、イノベーションを加速しているかを探ります。"
+      },
+      "second": {
+        "category": "ライフスタイル",
+        "title": "ミニマリスト生活ガイド",
+        "description": "ストレスを減らし、より充実した日々の体験を生み出すミニマリストな暮らし方。"
+      },
+      "third": {
+        "category": "デザイン",
+        "title": "アクセシブルなUIトレンド",
+        "description": "モダンな UI トレンドが、洗練された直感的なユーザー体験を保ちながらアクセシビリティをどう取り入れているか。"
+      }
+    }
+  },
+  "contact": {
+    "badge": "お問い合わせ",
+    "heading": "サポートが必要、またはご質問がありますか？",
+    "subheading": "私たちのチームが ShadcnStore を最大限に活用できるようお手伝いします。最適な連絡方法をお選びください。",
+    "discord": {
+      "title": "Discord コミュニティ",
+      "description": "活発なコミュニティに参加して、他の開発者とすばやく助け合い、ディスカッションしましょう。",
+      "button": "Discord に参加"
+    },
+    "github": {
+      "title": "GitHub Issues",
+      "description": "バグの報告、機能のリクエスト、オープンソースリポジトリへの貢献ができます。",
+      "button": "GitHub で見る"
+    },
+    "documentation": {
+      "title": "ドキュメント",
+      "description": "包括的なガイド、チュートリアル、コンポーネントドキュメントを閲覧できます。",
+      "button": "ドキュメントを見る"
+    },
+    "form": {
+      "title": "メッセージを送る",
+      "firstName": "名",
+      "firstNamePlaceholder": "太郎",
+      "lastName": "姓",
+      "lastNamePlaceholder": "山田",
+      "email": "メールアドレス",
+      "emailPlaceholder": "taro@example.com",
+      "subject": "件名",
+      "subjectPlaceholder": "コンポーネントのリクエスト、バグ報告、一般的なお問い合わせなど...",
+      "message": "メッセージ",
+      "messagePlaceholder": "ShadcnStore のコンポーネントについて、どのようにお手伝いできるかお知らせください...",
+      "submit": "メッセージを送信"
+    },
+    "validation": {
+      "firstName": "名は2文字以上で入力してください。",
+      "lastName": "姓は2文字以上で入力してください。",
+      "email": "有効なメールアドレスを入力してください。",
+      "subject": "件名は5文字以上で入力してください。",
+      "message": "メッセージは10文字以上で入力してください。"
+    }
+  },
+  "cta": {
+    "badge": "生産性スイート",
+    "blocksCount": "150+ ブロック",
+    "downloadsCount": "25K+ ダウンロード",
+    "ratingCount": "4.9★ 評価",
+    "headline": "チームの<1><2>パフォーマンス</2><3></3></1>を今すぐ加速",
+    "subheading": "ゼロから作るのはもう終わりです。shadcn/ui のプロジェクトにシームレスに統合できる、本番環境対応のコンポーネント・テンプレート・ダッシュボードを手に入れましょう。",
+    "browseComponents": "コンポーネントを見る",
+    "viewOnGithub": "GitHub で見る",
+    "trust": {
+      "freeComponents": "無料コンポーネント利用可能",
+      "commercialLicense": "商用ライセンス込み",
+      "regularUpdates": "定期アップデートとサポート"
+    }
+  },
+  "logoCarousel": {
+    "trustedBy": "世界の主要企業に信頼されています"
+  },
+  "footer": {
+    "newsletter": {
+      "title": "最新情報をお届け",
+      "description": "最新のアップデート、記事、リソースを毎週メールでお届けします。",
+      "placeholder": "メールアドレスを入力",
+      "subscribe": "登録する",
+      "invalidEmail": "有効なメールアドレスを入力してください。"
+    },
+    "brandDescription": "モダンな開発者のために設計された、厳選されたブロック・テンプレート・ランディングページ・管理ダッシュボードで、Web 開発を加速します。",
+    "columns": {
+      "product": "製品",
+      "company": "会社",
+      "resources": "リソース",
+      "legal": "法務"
+    },
+    "links": {
+      "features": "機能",
+      "pricing": "料金",
+      "api": "API",
+      "documentation": "ドキュメント",
+      "about": "私たちについて",
+      "blog": "ブログ",
+      "careers": "採用情報",
+      "press": "プレス",
+      "helpCenter": "ヘルプセンター",
+      "community": "コミュニティ",
+      "guides": "ガイド",
+      "webinars": "ウェビナー",
+      "privacy": "プライバシー",
+      "terms": "利用規約",
+      "security": "セキュリティ",
+      "status": "稼働状況"
+    },
+    "madeWith": "<2>ShadcnStore</2> が <1></1> を込めて制作",
+    "copyright": "© {{year}} 開発者コミュニティのために",
+    "bottomLinks": {
+      "privacyPolicy": "プライバシーポリシー",
+      "termsOfService": "利用規約",
+      "cookiePolicy": "Cookie ポリシー"
+    }
+  },
+  "themeCustomizer": {
+    "title": "テーマカスタマイザー",
+    "description": "ランディングページのテーマと配色をカスタマイズします。",
+    "mode": "モード",
+    "light": "ライト",
+    "dark": "ダーク",
+    "shadcnPresets": "Shadcn UI テーマプリセット",
+    "random": "ランダム",
+    "chooseShadcnTheme": "Shadcn テーマを選択",
+    "tweakcnPresets": "Tweakcn テーマプリセット",
+    "chooseTweakcnTheme": "Tweakcn テーマを選択",
+    "radius": "角丸",
+    "importTheme": "テーマをインポート",
+    "brandColors": "ブランドカラー",
+    "advancedCustomization": "高度なカスタマイズ",
+    "advancedDescription": "リアルタイムプレビュー、ビジュアルカラーピッカー、数百種類のプリセットテーマを使った高度なテーマカスタマイズは <1>tweakcn.com</1> へ",
+    "openTweakcn": "Tweakcn を開く"
+  },
+  "megaMenu": {
+    "descriptions": {
+      "freeBlocks": "必須の UI コンポーネントとセクション",
+      "premiumTemplates": "完成度の高いページテンプレートとレイアウト",
+      "adminDashboards": "フル機能の管理ダッシュボード",
+      "landingPages": "マーケティング・製品向けランディングテンプレート",
+      "ecommerce": "オンラインストアの管理画面とコンポーネント",
+      "saasDashboards": "アプリケーション管理インターフェース",
+      "analytics": "データ可視化とレポートのテンプレート",
+      "authentication": "ログイン・サインアップ・ユーザー管理ページ",
+      "documentation": "統合ガイドとセットアップ手順",
+      "componentShowcase": "全コンポーネントのインタラクティブなプレビュー",
+      "githubRepository": "オープンソースの基盤とコミュニティ",
+      "designSystem": "shadcn/ui の標準とカスタマイズ"
+    }
+  }
+}
